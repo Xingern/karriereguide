@@ -1,0 +1,73 @@
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+
+\newcommand\ytl[2]{
+\parbox[b]{8em}{\hfill{\color{cyan}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \parbox[c]{6cm}{\vspace{7pt}\color{red!40!black!80}\raggedright\sffamily #2\\[7pt]}\\[-3pt]}
+
+%Changing font to Helvetica
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright} %Fix sans serif math mode
+
+\begin{document}
+\renewcommand{\tablename}{Tabell}
+\renewcommand{\figurename}{Figur}
+% =======================================================================================
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+% =======================================================================================
+%                                   PREAMBLE
+% =======================================================================================
+\coverpage{\TITLE}{\SUBTITLE}{\AUTHOR}{\DATE}{\SUBJECT}
+%----------------------------------------------------------------------------------------
+\newpage
+\input{sections/forord}
+
+\newpage
+\tableofcontents
+
+% =======================================================================================
+%                                   PART I
+% =======================================================================================
+\part{Generelt om studiet}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{Hva er MTKJ egentlig?} \label{ch:MTKJ}
+\input{sections/part1/1. hva-er-mtkj}
+
+\newpage
+\chapter{Relevant erfaring} \label{ch:relevant_erfaring}
+\input{sections/part1/2. relevant-erfaring}
+
+\newpage
+\chapter{Jakten etter bedpres} \label{ch:bedpres}
+\input{sections/part1/3. jakten-etter-bedpres}
+
+
+% =======================================================================================
+%                                   PART II
+% =======================================================================================
+\part{Karriereveier}
+%----------------------------------------------------------------------------------------
+\newpage
+\chapter{Hvordan finne jobber}
+\input{sections/part2/1.Hvordan finne jobber}
+
+\newpage
+\chapter{Intro til karriereveier}
+\input{sections/part2/2.Intro til karriereveier}
+
+\newpage
+\chapter{Lønn}
+\input{sections/part2/3.Lønn}
+
+\newpage
+\chapter{Tips til CV og søknad}
+\input{sections/part2/4.Tips til CV og søknad}
+
+\newpage
+\part{Referanser}
+\printbibliography[title={Referanser}] %you may change the title in the toc here if you want
+\end{document}
